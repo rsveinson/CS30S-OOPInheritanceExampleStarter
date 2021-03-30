@@ -5,6 +5,7 @@
  * Assignment:      CS30S Inheritance example
  *
  * Description:     a first look at inheritance in OOP using Java
+ *                  using the Practitioner, Doctor, Pharmacist hierarchy
  ***********************************************************************/
  
  // import java libraries here as needed
@@ -56,6 +57,21 @@ public class CS30SInheritanceExample {  // begin class
     // ************************ get input **********************
 
     // ************************ processing ***************************
+    
+        Practitioner practitioner1 = new Practitioner();
+        Doctor doctor1 = new Doctor("Bruce", "Wayne", "GP");
+        
+        Doctor d2;
+        
+        practitioner1 = doctor1;
+        Practitioner practitioner2 = new Doctor();
+        
+        // not allowed a practitioner is not a doctor
+        //d2 = practitioner1;
+        
+        
+        
+        
         
 
 
