@@ -13,6 +13,7 @@
  import javax.swing.*;
  //import java.text.DecimalFormat;
  import java.io.*;
+ import java.util.ArrayList;
 
 public class CS30SInheritanceExample {  // begin class
     
@@ -51,26 +52,66 @@ public class CS30SInheritanceExample {  // begin class
         
     // ********** Print output Banner **********
 
-        System.out.println(programInfo.getBanner());
-        //fout.println(programInfo.getBanner());
+        // System.out.println(programInfo.getBanner());
+        // //fout.println(programInfo.getBanner());
             
-    // ************************ get input **********************
+    // // ************************ get input **********************
 
-    // ************************ processing ***************************
+    // // ************************ processing ***************************
     
-        Practitioner practitioner1 = new Practitioner();
-        Doctor doctor1 = new Doctor("Bruce", "Wayne", "GP");
+        // Practitioner practitioner1 = new Practitioner();
+        // Doctor doctor1 = new Doctor("Bruce", "Wayne", "GP");
         
-        Doctor d2;
+        // Doctor d2;
         
-        practitioner1 = doctor1;
-        Practitioner practitioner2 = new Doctor();
+        // //practitioner1 = doctor1;
+        // Practitioner practitioner2 = new Doctor("Ada", "Lovelace", "Surgeon");
         
-        // not allowed a practitioner is not a doctor
-        //d2 = practitioner1;
+        // // not allowed a practitioner is not a doctor
+        // //d2 = practitioner1;
         
+        // // what does toString() do?
+        // System.out.println(doctor1);
+        // System.out.println(doctor1.toString());
+        // System.out.println(doctor1.getName());
+        // System.out.println(doctor1.getFirstName());
         
+        // System.out.println(practitioner2.getFirstName());
+        // System.out.println(practitioner2.getName());
         
+        // Doctor docTemp = (Doctor)practitioner2;
+        // System.out.println(docTemp.getSpecialty());
+        //System.out.println((Doctor)practitioner2.getSpecialty());
+        
+        ArrayList<Practitioner> list = new ArrayList<>();
+        
+        // create some objects in the hierarchy
+        Practitioner pr = new Practitioner("Frodo", "Baggins");
+        Doctor dr = new Doctor("Leia", "Organa", "Surgeon");
+        Pharmacist ph = new Pharmacist("Luke", "Skywalker","Tatooine");
+        
+        // add objects to the list
+        list.add(pr);
+        list.add(dr);
+        list.add(ph);
+        
+        // now iterat over the list
+        String type;
+        
+        for(Practitioner p : list){
+            //System.out.println(p);
+            type = "Practitioner";
+            
+            if(p instanceof Doctor)
+                type = "Doctor";
+                
+            if(p instanceof Pharmacist)
+                type = "Pharmacist";
+                
+            System.out.println(type + " " + p);    
+            
+            
+        }// end of for
         
         
 

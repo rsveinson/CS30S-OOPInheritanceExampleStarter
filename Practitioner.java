@@ -13,8 +13,8 @@ public class Practitioner {
     //*** Class Variables ***
     
     //*** Instance Variables ***
-    private String firstName;
-    private String lastName;
+    protected String firstName;
+    protected String lastName;
     
     //*** Constructors ***
     
@@ -60,4 +60,15 @@ public class Practitioner {
     }// end set last name
     
     // other methods 
+    @Override
+    public String toString(){
+        return "Name: " + getName();
+    }// end toSTring
+    
+    public String getName(){
+        String st;
+        
+        st = firstName + ", " + lastName;
+        return st;
+    }// end getName
 } // end of public class
