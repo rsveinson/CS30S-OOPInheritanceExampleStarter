@@ -11,7 +11,8 @@
  // import java libraries here as needed
  
  import javax.swing.*;
- //import java.text.DecimalFormat;
+ import java.text.DecimalFormat;
+ import java.text.NumberFormat;
  import java.io.*;
  import java.util.ArrayList;
 
@@ -38,7 +39,7 @@ public class CS30SInheritanceExample {  // begin class
     // ***** create objects *******
     
         //Scanner scanner = new Scanner(System.in);
-        //NumberFormat currency = NumberFormat.getCurrencyInstance();    
+        NumberFormat currency = NumberFormat.getCurrencyInstance();    
         //DecimalFormat df1 = new DecimalFormat("##.###");
     
     // the ProgramInfo class has both a default and initialized constructor
@@ -113,7 +114,10 @@ public class CS30SInheritanceExample {  // begin class
             
         }// end of for
         
+        double salary = 89000.455676;
+        String st = "Salary: " + currency.format(salary);
         
+        System.out.println(st);
 
 
     // ************************ print output ****************************

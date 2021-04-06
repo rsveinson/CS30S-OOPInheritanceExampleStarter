@@ -8,6 +8,7 @@
  ***********************************************************************/
 
 // import libraries as needed here
+import java.text.NumberFormat;
 
 public class Practitioner {
     //*** Class Variables ***
@@ -15,6 +16,9 @@ public class Practitioner {
     //*** Instance Variables ***
     protected String firstName;
     protected String lastName;
+    protected double salary = 89000.3567;
+    
+    NumberFormat currency = NumberFormat.getCurrencyInstance();
     
     //*** Constructors ***
     
@@ -62,7 +66,7 @@ public class Practitioner {
     // other methods 
     @Override
     public String toString(){
-        return "Name: " + getName();
+        return "Name: " + getName() + "Salary: =" + currency.format(salary);
     }// end toSTring
     
     public String getName(){
