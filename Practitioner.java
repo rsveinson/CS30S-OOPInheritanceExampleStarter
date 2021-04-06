@@ -66,7 +66,7 @@ public class Practitioner {
     // other methods 
     @Override
     public String toString(){
-        return "Name: " + getName() + "Salary: =" + currency.format(salary);
+        return "Name: " + getName() + " Salary: " + currency.format(salary);
     }// end toSTring
     
     public String getName(){
