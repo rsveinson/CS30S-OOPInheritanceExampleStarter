@@ -103,8 +103,12 @@ public class CS30SInheritanceExample {  // begin class
             //System.out.println(p);
             type = "Practitioner";
             
-            if(p instanceof Doctor)
+            if(p instanceof Doctor){
+                //p.getSpecialty();
+                // Doctor d = (Doctor)p;
+                // d.getSpecialty();
                 type = "Doctor";
+            }
                 
             if(p instanceof Pharmacist)
                 type = "Pharmacist";
